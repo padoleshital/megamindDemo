@@ -11,7 +11,7 @@ export class DetailService {
 
   getDetails()
   {
-    return this.http.get<any>(`${environment.baseUrl}`)
+    return this.http.get<any>(`${environment.baseUrl}/Datas`)
   }
  
 }
