@@ -1,14 +1,22 @@
-<table mat-table [dataSource]="detailslist" class="mat-elevation-z8">
- 
-    <ng-container *ngFor="let column of columns" [matColumnDef]="column.dataKey"  >
-      <th mat-header-cell *matHeaderCellDef>{{ column.header }}</th>
-      <td mat-cell *matCellDef="let element">
-        <!-- {{ element.Properties.find(prop => prop.Label === column.dataKey)?.Value }}  -->
-    </td>
-    </ng-container>
-  
+<table class="table  table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">SamplingTime</th>
+      <th scope="col">Project Name</th>
+      <th scope="col">Construction Count</th>
+      <th scope="col">Is Construction Completed</th>
+      <th scope="col">Length of the road</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let dataItem of detailslist">   
+      <td>{{ dataItem?.SamplingTime }}</td>
+  <td>{{ getProperty(dataItem?.Properties, 'Project Name') }}</td>
+  <td>{{ getProperty(dataItem?.Properties, 'Construction Count') }}</td>
+  <td>{{ getProperty(dataItem?.Properties, 'Is Construction Completed') }}</td>
+  <td>{{ getProperty(dataItem?.Properties, 'Length of the road') }}</td>  
+     
+    </tr>
    
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
-  </table> 
-  
+  </tbody>
+</table>

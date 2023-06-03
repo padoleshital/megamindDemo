@@ -10,6 +10,9 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { SammaryDetailsComponent } from './sammary-details/sammary-details.component';
 import { DetailViewComponent } from './detail-view/detail-view.component';
 import {MatTableModule} from '@angular/material/table';
+import { ReactiveFormsModule } from '@angular/forms';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +26,8 @@ import {MatTableModule} from '@angular/material/table';
     HttpClientModule,
     BrowserAnimationsModule,
     MatTabsModule,
-    MatTableModule
+    MatTableModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

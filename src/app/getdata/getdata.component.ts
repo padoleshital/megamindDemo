@@ -9,6 +9,7 @@ import { DetailService } from 'src/service/detail.service';
 export class GetdataComponent implements OnInit {
   
 
+detailList: any;
   constructor(private getservice :DetailService ) { }
 
   ngOnInit(): void {
@@ -18,7 +19,8 @@ export class GetdataComponent implements OnInit {
   getDetail()
   {
     this.getservice.getDetails().subscribe((res)=>{
-      console.log(res,"data")
+      console.log(res,"data");
+      this.detailList = res;
     })
   }
 
