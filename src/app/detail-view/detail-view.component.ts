@@ -43,8 +43,7 @@ export class DetailViewComponent implements OnInit {
     return property ? property.Value : ''
   }
   selectSamplingTime (samplingTime: string, dataItem: any) {
-    this.selectedSamplingTime = samplingTime
-    console.log(dataItem, '55')
+    this.selectedSamplingTime = samplingTime   
     console.log(dataItem.Properties.find((x: any) => x.Label == 'Project Name'))
     let projectname = dataItem.Properties.find(
       (x: any) => x.Label == 'Project Name'
