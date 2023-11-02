@@ -29,7 +29,8 @@
                     "Label": "Length of the road"
                 }
             ]
-        }, {
+        },
+         {
             "SamplingTime": "2021-04-22T11:00:05.5081232+05:30",
             "Properties": [{
                     
@@ -48,7 +49,8 @@
                    
                 }
             ]
-        }, {
+        },
+        {
             "SamplingTime": "2021-04-23T11:00:05.5081232+05:30",
             "Properties": [{
                    

@@ -1,0 +1,32 @@
+
+.container {
+  display: flex;
+  border-style: solid;
+  border-width: 2px; 
+}
+
+.listbox {
+  flex: 1;
+  
+  
+}
+
+.listbox ul {
+  list-style-type: none;
+  padding: 0;
+ 
+}
+
+.listbox li {
+  cursor: pointer;
+  padding: 5px;
+}
+
+.listbox li.selected {
+  background-color: lightgray;
+}
+
+.detail-ui {
+  flex: 2;
+  padding: 10px;
+}

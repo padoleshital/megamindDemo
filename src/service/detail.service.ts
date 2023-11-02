@@ -11,7 +11,12 @@ export class DetailService {
 
   getDetails()
   {
-    return this.http.get<any>(`${environment.baseUrl}`)
+    return this.http.get<any>(`${environment.baseUrl}/Datas`)      
+  }
+  postDeatils(payload:any)
+  {
+    console.log(payload,"payload")
+    return this.http.put<any>(`${environment.baseUrl}/Datas`,payload)
   }
  
 }

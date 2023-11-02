@@ -1,0 +1,22 @@
+<table class="table  table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">SamplingTime</th>
+      <th scope="col">Project Name</th>
+      <th scope="col">Construction Count</th>
+      <th scope="col">Is Construction Completed</th>
+      <th scope="col">Length of the road</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let dataItem of detailslist">   
+      <td>{{ dataItem?.SamplingTime }}</td>
+  <td>{{ getProperty(dataItem?.Properties, 'Project Name') }}</td>
+  <td>{{ getProperty(dataItem?.Properties, 'Construction Count') }}</td>
+  <td>{{ getProperty(dataItem?.Properties, 'Is Construction Completed') }}</td>
+  <td>{{ getProperty(dataItem?.Properties, 'Length of the road') }}</td>  
+     
+    </tr>
+   
+  </tbody>
+</table>
